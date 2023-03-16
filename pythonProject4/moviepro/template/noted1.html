@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body %}
+<body style="background-color: lightblue;">
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+        <img src="{{ww.image.url}}" style="height:600px; width:400px ; padding-top:4%">
+    </div>
+    <div class="col-md-6" >
+         {{ww.name}}<br>
+{{ww.year}}<br>
+
+{{ww.des}}
+
+        </div>
+    </div>
+</div>
+<a class="btn btn-dark" href="{% url 'movie:update' ww.id %}">
+    update
+</a>
+<a class="btn btn-danger" href="{% url 'movie:delete' ww.id %}">DELETE</a>
+{% endblock %}
